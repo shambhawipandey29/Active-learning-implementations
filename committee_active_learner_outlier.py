@@ -30,6 +30,8 @@ from statsmodels.tsa.arima_model import ARIMA
 #df=pd.read_csv("train.csv")
 df=pd.read_csv("LMTO_B_new.csv")
 #df.drop(["name", "OH"], axis=1, inplace=True)
+df.drop(["name", "OH", "Tolerance_factor", "Octahedral_factor", "ionic_ration_AO", "ionic_ration_BO", "average_ionic_radius1"], axis=1, inplace=True)
+
 target_column = "O"
 x_input = df.drop(target_column, axis = 1)
 y_output = df[target_column]
